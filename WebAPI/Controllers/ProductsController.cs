@@ -13,6 +13,8 @@ namespace WebAPI.Controllers
     {
         IProductService _productService;
 
+        // IoC Container ile program.cs içerisinde addSingleton ile bir ekleme yapıldı.
+        // Bu ekleme ile herhangi bir constructure'da IProductService objesi ister ise IoC container ile otomatik olarak oluşturuluyor
         public ProductsController(IProductService productService)
         {
             _productService = productService;
